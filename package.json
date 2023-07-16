@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "irc-framework": "^4.13.1",
+    "jsonwebtoken": "^9.0.1"
+  }
+}
