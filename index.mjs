@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import * as IRC from "irc-framework";
 import "dotenv/config";
 
-const REQUIRED_FLAGS = /Oiov/;
+const REQUIRED_FLAGS = /[Oiov]/;
 
 const bot = new IRC.Client();
 
