@@ -78,6 +78,12 @@ bot.on("message", async function (event) {
 
   // React to any private message with a flags check
   if (event.type === "privmsg") {
-    bot.say("ChanServ", `FLAGS #geheimorganisation ${event.nick}`);
+    bot.whois(event.nick, (res) => {
+      if (res.secure && res.account) {
+        bot.say("ChanServ", `FLAGS #geheimorganisation ${event.nick}`);
+      } else {
+        event.reply("Sorry, ohne NickServ-Login lass ich dich nicht rein.");
+      }
+    });
   }
 });
